@@ -37,7 +37,7 @@ As unstructured documents become more prevalent, automating metadata generation 
 ```
 MARS_2025/
 ├── app.py                        ← Flask backend (optional)
-├── MARS.ipynb                    ← Google Colab notebook (fully runnable ✅)
+├── MARS.ipynb                    ← Google Colab notebook (fully runnable )
 ├── templates/
 │   └── index.html               ← Upload form with pastel styling
 ├── static/
@@ -106,10 +106,10 @@ python app.py
 
 ## Deliverables
 
-- ✅ `MARS.ipynb` — Executable Google Colab notebook
-- ✅ `index.html` with pastel upload form
-- ✅ `README.md` — Setup and usage instructions
-- ⏯️ `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
+-  `MARS.ipynb` — Executable Google Colab notebook
+-  `index.html` with pastel upload form
+-  `README.md` — Setup and usage instructions
+- ⏯ `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
 
 ---
 
