@@ -44,7 +44,7 @@ automated_metadata/
 ├── uploads/                     ← Folder where uploaded files are stored at runtime
 ├── output/                      ← Folder where metadata JSON files are saved at runtime
 ├── README.md                    ← Project documentation
-└── demo.mp4 / demo_link.txt     ← Optional demo video or link
+└── demo.mp4 / demo_link.txt     
 ```
 
 > Note: `uploads/` and `output/` are created at runtime and should be added to `.gitignore`.
