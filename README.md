@@ -109,7 +109,7 @@ python app.py
 -  `MARS.ipynb` — Executable Google Colab notebook
 -  `index.html` with pastel upload form
 -  `README.md` — Setup and usage instructions
-- ⏯ `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
+-  `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
 
 ---
 
