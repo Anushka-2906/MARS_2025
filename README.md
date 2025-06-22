@@ -35,20 +35,17 @@ As unstructured documents become more prevalent, automating metadata generation 
 ## Folder Structure
 
 ```
-MARS_2025/
+automated_metadata/
 ├── app.py                        ← Flask backend (optional)
-├── MARS.ipynb                    ← Google Colab notebook (fully runnable )
 ├── templates/
 │   └── index.html               ← Upload form with pastel styling
 ├── static/
 │   └── bg.avif                  ← Background image used in the UI
 ├── uploads/                     ← Created at runtime (ignored in repo)
-├── output/                      ← Created at runtime (ignored in repo)
 ├── README.md                    ← Project documentation
-└── demo.mp4 / demo_link.txt     ← Optional 2-minute usage demo
-```
+└── demo.mp4 / demo_link.txt     
 
-> Note: `uploads/` and `output/` are temporary runtime folders and need not be pushed to GitHub.
+> Note: `uploads/` is generated at runtime and can be excluded from version control.
 
 ---
 
@@ -68,7 +65,7 @@ MARS_2025/
 
 ```bash
 git clone https://github.com/Anushka-2906/MARS_2025.git
-cd MARS_2025
+cd automated_metadata
 ```
 
 2. Install required dependencies:
@@ -106,7 +103,7 @@ python app.py
 
 ## Deliverables
 
--  `MARS.ipynb` — Executable Google Colab notebook
+-  `MARS.ipynb` — Executable Google Colab notebook (submitted separately)
 -  `index.html` with pastel upload form
 -  `README.md` — Setup and usage instructions
 -  `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
