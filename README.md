@@ -1,112 +1,116 @@
-# Automated Metadata Generation System
+# MARS 2025 – Automated Metadata Generation System
 
-This project is a fully functional web-based system that automatically generates structured metadata from unstructured documents. It supports multiple formats including TXT, PDF, and DOCX, and incorporates OCR to handle scanned or image-based files.
+This project presents a web-based system that automatically generates structured metadata from unstructured documents. It supports `.txt`, `.pdf`, and `.docx` formats, and incorporates OCR (Optical Character Recognition) for scanned or image-based PDFs. The system runs seamlessly on **Google Colab** and includes a clean, pastel-themed web interface.
+
+---
 
 ## Project Overview
 
-This system aims to simplify the process of metadata generation for a wide range of unstructured documents. It extracts meaningful content from uploaded files and converts it into structured metadata in JSON format. The system can be used in contexts like digital archiving, content classification, and document indexing.
+As unstructured documents become more prevalent, automating metadata generation is critical for indexing, classification, and retrieval. This system extracts meaningful content from documents and outputs it as structured JSON metadata, ideal for content management and digital archiving workflows.
 
-### Core Features
+---
 
-- **Automated Metadata Generation**  
-  Generates metadata fields such as title, word count, keywords, summary, language, file type, and upload time.
+## Features
 
-- **Content Extraction**  
-  Supports `.txt`, `.pdf`, and `.docx` formats. For scanned PDFs or image-based documents, the system uses OCR to extract text content.
+- **Automated Metadata Extraction**  
+  Generates metadata including title, word count, keywords, summary, language, file type, and upload time.
 
-- **Semantic Content Identification**  
-  Identifies and summarizes meaningful sections of the document using lightweight natural language processing.
+- **Multi-format Document Support**  
+  Accepts `.txt`, `.docx`, and `.pdf` files. OCR is used for image-based PDFs.
 
-- **Structured Metadata Output**  
-  Outputs metadata in JSON format, which is easy to store, visualize, and integrate into other systems.
+- **Semantic Analysis**  
+  Identifies and summarizes key sentences and topics using lightweight NLP.
 
-- **User Interface**  
-  A clean web interface allows users to upload documents and view their metadata in real-time.
+- **Structured JSON Output**  
+  Outputs metadata in a clean, structured format for further use or integration.
 
-- **Google Colab Compatibility**  
-  The system is fully runnable in Google Colab using `flask-ngrok`, making it easily accessible without requiring local setup.
+- **Web Interface**  
+  Users can upload documents and view metadata through a simple pastel-themed UI.
+
+- **Google Colab Compatible**  
+  Fully runnable in Google Colab with `flask-ngrok` for live public access.
 
 ---
 
 ## Folder Structure
 
 ```
-automated_metadata/
-├── app.py                        ← Flask backend (converted into notebook format)
-├── automated_metadata.ipynb     ← Colab-compatible notebook (standalone and runnable)
+MARS_2025/
+├── app.py                        ← Flask backend (optional)
+├── MARS.ipynb                    ← Google Colab notebook (fully runnable ✅)
 ├── templates/
-│   └── index.html               ← Upload form (pastel-lavender theme)
+│   └── index.html               ← Upload form with pastel styling
 ├── static/
-│   └── bg.avif                  ← Background image for the UI
-├── uploads/                     ← Temporary folder created at runtime (ignored in repo)
-├── output/                      ← Temporary folder created at runtime (ignored in repo)
-├── README.md                    ← Project overview, setup, and usage instructions
-└── demo.mp4 / demo_link.txt     ← Optional 2-minute demo (video or link)
+│   └── bg.avif                  ← Background image used in the UI
+├── uploads/                     ← Created at runtime (ignored in repo)
+├── output/                      ← Created at runtime (ignored in repo)
+├── README.md                    ← Project documentation
+└── demo.mp4 / demo_link.txt     ← Optional 2-minute usage demo
 ```
 
-> Note: The `uploads/` and `output/` folders are created dynamically and can be excluded from version control.
+> Note: `uploads/` and `output/` are temporary runtime folders and need not be pushed to GitHub.
 
 ---
 
-## How to Run (Google Colab)
+## How to Run (Google Colab – Recommended)
 
-1. Open `automated_metadata.ipynb` in Google Colab.
+1. Open the notebook [`MARS.ipynb`](https://github.com/Anushka-2906/MARS_2025/blob/main/MARS.ipynb) in [Google Colab](https://colab.research.google.com).
 2. Run all the cells sequentially.
-3. A public URL will be generated using ngrok.
-4. Upload a document using the form.
-5. The system will display metadata on the screen and save it in JSON format.
+3. A public ngrok URL will be generated.
+4. Upload any `.txt`, `.pdf`, or `.docx` file using the interface.
+5. View and download the generated metadata as a JSON file.
 
 ---
 
-## Setup for Local Deployment (Optional)
+## Optional: Local Setup
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/automated_metadata.git
-cd automated_metadata
+git clone https://github.com/Anushka-2906/MARS_2025.git
+cd MARS_2025
 ```
 
-2. Install required packages:
+2. Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the Flask app:
+3. Run the application:
 
 ```bash
 python app.py
 ```
 
-Then open `http://localhost:5000` in your browser.
+4. Open `http://localhost:5000` in your browser.
 
 ---
 
-## Deliverables
-
-- `automated_metadata.ipynb` — Self-contained Colab notebook
-- `templates/index.html` — Web interface with a pastel lavender theme
-- `app.py` — Flask backend version (optional)
-- `README.md` — Full documentation
-- `demo.mp4` or `demo_link.txt` — Short demo video (optional)
-
----
-
-## Example Output (JSON Metadata)
+## Sample Metadata Output
 
 ```json
 {
-  "filename": "sample.pdf",
-  "title": "Introduction to Algorithms",
-  "word_count": 1750,
-  "keywords": ["algorithms", "complexity", "sorting"],
-  "summary": "This document introduces fundamental algorithmic concepts...",
+  "filename": "example.pdf",
+  "title": "Fundamentals of Operating Systems",
+  "word_count": 1482,
+  "keywords": ["operating systems", "memory", "process", "scheduling"],
+  "summary": "This document introduces the key principles of operating systems...",
   "language": "en",
-  "created_time": "2025-06-22T14:30:00",
+  "created_time": "2025-06-22T13:40:12",
   "file_type": "application/pdf"
 }
 ```
 
 ---
+
+## Deliverables
+
+- ✅ `MARS.ipynb` — Executable Google Colab notebook
+- ✅ `index.html` with pastel upload form
+- ✅ `README.md` — Setup and usage instructions
+- ⏯️ `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
+
+---
+
 
