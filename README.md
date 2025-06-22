@@ -41,11 +41,13 @@ automated_metadata/
 │   └── index.html               ← Upload form with pastel styling
 ├── static/
 │   └── bg.avif                  ← Background image used in the UI
-├── uploads/                     ← Created at runtime (ignored in repo)
+├── uploads/                     ← Folder where uploaded files are stored at runtime
+├── output/                      ← Folder where metadata JSON files are saved at runtime
 ├── README.md                    ← Project documentation
-└── demo.mp4 / demo_link.txt     
+└── demo.mp4 / demo_link.txt     ← Optional demo video or link
+```
 
-> Note: `uploads/` is generated at runtime and can be excluded from version control.
+> Note: `uploads/` and `output/` are created at runtime and should be added to `.gitignore`.
 
 ---
 
@@ -103,11 +105,10 @@ python app.py
 
 ## Deliverables
 
--  `MARS.ipynb` — Executable Google Colab notebook (submitted separately)
--  `index.html` with pastel upload form
--  `README.md` — Setup and usage instructions
--  `demo.mp4` or `demo_link.txt` — Optional demo showing end-to-end flow
+- `MARS.ipynb` — Executable Google Colab notebook (submitted separately)
+- `index.html` — Upload form for UI
+- `README.md` — Setup and usage instructions
+- `demo.mp4` or `demo_link.txt` 
 
 ---
-
 
